@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func Square(upper float64) float64 {
+func Square(upper int) uint64 {
 	slice := make([]float64, 64)
 	for i := range slice {
 		slice[i] = math.Pow(float64(2), float64(i))
