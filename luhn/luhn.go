@@ -16,7 +16,6 @@ func Valid(input string) bool {
 	}
 
 	slice := make([]int, 0)
-	fmt.Println(slice)
 	for i := range val {
 		add, err := strconv.Atoi(string(val[i]))
 		if err != nil {
@@ -26,7 +25,6 @@ func Valid(input string) bool {
 		slice = append(slice, add)
 	}
 
-	
 	for i := len(slice) - 2; i >= 0; i = i - 2 {
 		slice[i] = slice[i] * 2
 		
