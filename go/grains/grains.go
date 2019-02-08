@@ -2,14 +2,21 @@ package main
 
 import (
 	"fmt"
-	"math"
+	// "math"
 )
 
 func makeBoard(max int) []uint64 {
-	slice := make([]uint64, max)
+	slice := make([]uint64, 64)
 	for i := range slice {
-		slice[i] = uint64(math.Pow(float64(2), float64(i)))
+		slice[i] = uint64(i+1)
 	}
+
+	for i := range slice {
+		if slice[i] > 2{
+			slice[i] = slice[i-1] << 1
+		}
+	}
+
 	return slice
 }
 
