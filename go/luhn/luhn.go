@@ -11,7 +11,7 @@ func Valid(input string) bool {
 	check := false
 	val := strings.Replace(input, " ", "", -1)
 
-	if val == "0"{
+	if val == "0" {
 		return false
 	}
 
@@ -27,12 +27,12 @@ func Valid(input string) bool {
 
 	for i := len(slice) - 2; i >= 0; i = i - 2 {
 		slice[i] = slice[i] * 2
-		
+
 		if slice[i] > 9 {
 			slice[i] = slice[i] - 9
 		}
 	}
-	
+
 	sum := 0
 	for i := range slice {
 		sum += slice[i]
