@@ -22,7 +22,7 @@ func Square(index int) (uint64, error) {
 }
 
 // Total creates a slice containing 64 values using MakeBoard, then sums all values in the slice
-func Total() uint64{
+func Total() uint64 {
 	var board []uint64
 	board = MakeBoard(64)
 	var sum uint64 = 0
