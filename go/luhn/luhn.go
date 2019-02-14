@@ -1,3 +1,5 @@
+package luhn
+
 import (
 	"fmt"
 	"strconv"
