@@ -25,7 +25,7 @@ func Square(index int) (uint64, error) {
 func Total() uint64 {
 	var board []uint64
 	board = MakeBoard(64)
-	var sum uint64 = 0
+	var sum uint64;
 	for _, grains := range board {
 		sum += grains
 	}
