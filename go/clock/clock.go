@@ -88,9 +88,3 @@ func CompareClocks(first, second Clock) bool {
 	}
 	return true
 }
-
-// func main() {
-// 	clock := New(10, 30)
-// 	clock.Add(30)
-// 	fmt.Println(clock.String())
-// }
