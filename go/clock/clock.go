@@ -4,10 +4,6 @@ import (
 	"fmt"
 )
 
-// Implement a clock that handles cs without dates.
-// You should be able to add and subtract minutes to it.
-// Two clocks that represent the same c should be equal to each other.
-
 // Clock is used to keep track of hours and minutes
 type Clock struct {
 	hours   int
@@ -34,6 +30,7 @@ func New(hours, minutes int) Clock {
 	return Clock{hours, minutes}
 }
 
+// String is a method of the Clock type that returns a string of the time in the Clock
 func (c Clock) String() string {
 	result := ""
 	switch {
@@ -49,7 +46,7 @@ func (c Clock) String() string {
 	return fmt.Sprintf(result, c.hours, c.minutes)
 }
 
-// Add adds minutes to an existing Clock type
+// Add is a method of the Clock type that adds minutes to an existing Clock type
 func (c Clock) Add(add int) Clock {
 	c.minutes = c.minutes + add
 	// fmt.Println(c.minutes)
@@ -66,7 +63,7 @@ func (c Clock) Add(add int) Clock {
 	return c
 }
 
-// Subtract subtracts minutes from an existing Clock type
+// Subtract is a method of the Clock type that subtracts minutes from an existing Clock type
 func (c Clock) Subtract(subtract int) Clock {
 	c.minutes = c.minutes - subtract
 	removeHours := 0
@@ -81,7 +78,7 @@ func (c Clock) Subtract(subtract int) Clock {
 	return c
 }
 
-// CompareClocks checks if the c indidcated by two Clock types are the same
+// CompareClocks checks if the Clocks passed into it are the same
 func CompareClocks(first, second Clock) bool {
 	if first.hours != second.hours || first.minutes != second.minutes {
 		return false
