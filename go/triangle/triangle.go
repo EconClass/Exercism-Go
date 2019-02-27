@@ -4,13 +4,18 @@ package triangle
 
 import "math"
 
+// Kind is a string
 type Kind string
 
 const (
-	NaT = "NaT" // not a triangle
-	Equ = "Equ" // equilateral
-	Iso = "Iso" // isosceles
-	Sca = "Sca" // scalene
+	// NaT not a triangle
+	NaT = "NaT"
+	// Equ equilateral
+	Equ = "Equ"
+	// Iso isosceles
+	Iso = "Iso"
+	// Sca scalene
+	Sca = "Sca"
 )
 
 // KindFromSides should have a comment documenting it.
