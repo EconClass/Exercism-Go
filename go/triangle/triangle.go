@@ -18,15 +18,21 @@ const (
 	Sca = "Sca"
 )
 
-// KindFromSides should have a comment documenting it.
-func KindFromSides(a, b, c float64) Kind {
+func isNotValid(a, b, c float64) bool {
 	if a <= 0 || b <= 0 || c <= 0 {
-		return NaT
+		return true
 	}
 	if math.IsNaN(a+b+c) || math.IsInf(a+b+c, 0) {
+		return true
+	}
+	return false
+}
+
+// KindFromSides should have a comment documenting it.
+func KindFromSides(a, b, c float64) Kind {
+	if isNotValid(a, b, c) {
 		return NaT
 	}
-
 	switch {
 	case a+b < c || a+c < b || b+c < a:
 		return NaT
